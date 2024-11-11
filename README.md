@@ -1,1 +1,1 @@
-Use `npm run dev` to run the program
+An Employee Management System - Backend
