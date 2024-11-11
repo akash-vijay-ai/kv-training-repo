@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="action()">Click ME</button>
+    <div id="name"></div>
+    <script>
+      async function action() {
+        const response = await fetch("http://localhost:3000/profile");
+        const profile = await response.json();
+
+        // Display the profile data in the HTML
+        document.getElementById("name").innerHTML =
+          "Name: " + profile.name;
+      }
+    </script>
+  </body>
+</html>
